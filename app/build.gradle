@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.dagger.hilt.android'
-    kotlin("kapt")
 
 }
 
@@ -44,14 +43,15 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appcompat"
     implementation "com.google.android.material:material:$material"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout"
-    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_fragment-ktx"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_fragment_ktx"
     implementation "androidx.navigation:navigation-ui-ktx:$navigation_ui_ktx"
     testImplementation "junit:junit:$junit"
     androidTestImplementation "androidx.test.ext:junit:$junit"
-    androidTestImplementation "androidx.test.$espresso:espresso_core"
+    androidTestImplementation "androidx.test.espresso:$espresso_core"
 
     // Hilt
     implementation("com.google.dagger:hilt-android:$hilt_android")
+
     kapt("com.google.dagger:hilt-android-compiler:$hilt_android_compiler")
 
 }
