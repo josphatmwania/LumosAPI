@@ -10,6 +10,17 @@ plugins {
 
 buildscript {
     ext{
+        core_ktx ="1.9.0"
+        appcompat= "1.6.1"
+        material ="1.8.0"
+        constraintlayout ='2.1.4'
+        navigation_fragment_ktx ="2.5.3"
+        navigation_ui_ktx = "2.5.3"
+        junit = "4.13.2"
+        junit= "1.1.5"
+        espresso_core = "3.5.1"
+
+
 
         hilt_android = "2.44"
         hilt_android_compiler:"2.44"
