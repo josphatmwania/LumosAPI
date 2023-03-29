@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.dagger.hilt.android'
+//    id 'kotlin-kapt'
 
 }
 
@@ -51,11 +52,28 @@ dependencies {
 
     // Hilt
     implementation("com.google.dagger:hilt-android:$hilt_android")
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
 
-    kapt "com.google.dagger:hilt-android-compiler:$hilt_android_compiler"
+//    kapt "com.google.dagger:hilt-android-compiler:$hilt_android_compiler"
 
     // navigation component
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    // http logging interceptor
+    implementation("com.squareup.okhttp3:logging-interceptor:$http_logging_version")
+
+    // coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_extensions_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+
+
 
 }

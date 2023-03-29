@@ -11,12 +11,13 @@ buildscript {
         junit= "1.1.5"
         espresso_core = "3.5.1"
         nav_version = "2.5.3"
-
-
-
-
+        retrofit_version = "2.9.0"
+        http_logging_version = "5.0.0-alpha.3"
         hilt_android = "2.44"
-        hilt_android_compiler:"2.44"
+        coroutines_version = "1.6.4"
+        lifecycle_extensions_version = "2.2.0"
+        lifecycle_version = ""
+        hilt_version:"2.44"
 
 
 
@@ -29,6 +30,7 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.7.10' apply false
     // Hilt
     id("com.google.dagger.hilt.android") version "2.44" apply false
+
 
 }
 
