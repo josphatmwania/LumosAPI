@@ -74,6 +74,9 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
 
+    // datastore
+    implementation("androidx.datastore:datastore-preferences:$datastore_version")
+
 
     // splashScreen
     implementation "androidx.core:core-splashscreen:$splash_screen_version"

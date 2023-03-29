@@ -19,6 +19,7 @@ buildscript {
         lifecycle_version = "2.5.1"
         hilt_version:"2.44"
         splash_screen_version = "1.0.0"
+        datastore_version = "1.0.0"
 
 
 
