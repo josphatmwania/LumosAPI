@@ -7,6 +7,7 @@ plugins {
 }
 
 android {
+    namespace 'com.josphat.lumosapi'
     compileSdk 33
 
     defaultConfig {
@@ -17,6 +18,16 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        "room.schemaLocation":"$projectDir/schemas".toString(),
+                        "room.incremental":"true",
+                        "room.expandProjection":"true"]
+            }
+        }
+        signingConfig signingConfigs.debug
     }
 
     buildTypes {
@@ -91,4 +102,8 @@ dependencies {
 
 
 
+}
+
+kapt {
+    correctErrorTypes true
 }
